@@ -47,7 +47,7 @@ switch (y)
     alpha=20; %pressure angle degree
     k=0.115;
 endswitch
-c=k/((1/Ep)+(1/Eg));
+c=k/((1/Ep)+(1/Eg)); %deformation factor
 FOS=0; %factor of safety available
 i=1; %counter variable for module row matrix 
 while (FOSr>=FOS)
