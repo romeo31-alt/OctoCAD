@@ -5,6 +5,7 @@ OctoCAD is a design software which designs machine elements and generates a CAD 
 
 Dependencies: GNU Octave and FreeCAD.
 
+For fair use of the software, refer:
 https://help.github.com/en/github/site-policy/github-terms-of-service#d-user-generated-content
 
 There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
