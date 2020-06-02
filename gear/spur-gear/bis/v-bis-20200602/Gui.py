@@ -58,7 +58,7 @@ class Gui(QDialog):
         self.grade.addItem("10");
         self.grade.addItem("11");
         self.grade.addItem("12");
-        self.layout.addRow(QLabel("Select of gear pair"),self.grade);
+        self.layout.addRow(QLabel("Select grade of gear pair"),self.grade);
         self.y=QComboBox();
         self.y.addItem("14.5 degree full depth involute tooth");
         self.y.addItem("20 degree full depth involute tooth");
@@ -88,7 +88,7 @@ class Gui(QDialog):
         self.cs.setRange(1,10);
         self.formGroupBox.setLayout(self.layout);
     def submit(self):
-        os.makedirs("/home/ubuntu/OctoCAD", exist_ok=True)
+        os.makedirs("/home/ubuntu/OctoCAD", exist_ok=True);
         with open("/home/ubuntu/OctoCAD/user_input.txt","w") as user_input_f:
             user_input_f.write("# name: Eg\n# type: scalar\n");
             user_input_f.write(self.Eg.text()+"\n\n\n");
