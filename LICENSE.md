@@ -1,7 +1,7 @@
 OctoCAD, version 20200520
 Copyright (C) 2020 Atharv B Darekar.
 
-OctoCAD is a design software which designs machine elements and generates a CAD model.
+OctoCAD is a design software which designs machine elements and generates the CAD model.
 
 Dependencies: GNU Octave and FreeCAD.
 
