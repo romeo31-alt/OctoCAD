@@ -1,4 +1,4 @@
-OctoCAD, version 20200520
+OctoCAD, version 20.5
 Copyright (C) 2020 Atharv B Darekar.
 
 OctoCAD is a design software which designs machine elements and generates the CAD model.
