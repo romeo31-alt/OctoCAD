@@ -4,7 +4,7 @@ OctoCAD© is a design automation software for machine elements and
 an application programming interface for FreeCAD which generates 
 the CAD models of the machine element.
 
-Dependencies: GNU OctaveR©and FreeCADR©.
+Dependencies: GNU Octave and FreeCAD.
 
 There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or 
 FITNESS FOR A PARTICULAR PURPOSE.
