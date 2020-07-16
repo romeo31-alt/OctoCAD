@@ -1,4 +1,4 @@
-OctoCAD©, version 20.5 Copyright 2020 Atharv B Darekar.
+OctoCAD©, version 20.05 Copyright 2020 Atharv B Darekar.
 
 OctoCAD© is a design automation software for machine elements and 
 an application programming interface for FreeCAD which generates 
