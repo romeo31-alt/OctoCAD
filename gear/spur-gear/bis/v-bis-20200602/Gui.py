@@ -23,7 +23,7 @@ class Gui(QDialog):
         self.centering();
         self.show();
     def setIcon(self):
-        icon=QIcon("/home/ubuntu/Documents/OctoCAD/v-bis-20200602/logo_transparent_enlarged.png");
+        icon=QIcon("/home/ubuntu/OctoCAD/gear/spur-gear/bis/v-bis-20200602/logo_transparent_enlarged.png");
         self.setWindowIcon(icon);
     def centering(self):
         window=self.frameGeometry();
@@ -88,8 +88,8 @@ class Gui(QDialog):
         self.cs.setRange(1,10);
         self.formGroupBox.setLayout(self.layout);
     def submit(self):
-        os.makedirs("/home/ubuntu/OctoCAD", exist_ok=True);
-        with open("/home/ubuntu/OctoCAD/user_input.txt","w") as user_input_f:
+        os.makedirs("/home/ubuntu/.OctoCAD", exist_ok=True);
+        with open("/home/ubuntu/.OctoCAD/user_input.txt","w") as user_input_f:
             user_input_f.write("# name: Eg\n# type: scalar\n");
             user_input_f.write(self.Eg.text()+"\n\n\n");
             user_input_f.write("# name: Ep\n# type: scalar\n");
@@ -124,10 +124,10 @@ class Gui(QDialog):
             user_input_f.write(self.zg.text()+"\n\n\n");
             user_input_f.write("# name: zp\n# type: scalar\n");
             user_input_f.write(self.zp.text()+"\n\n\n");
-        os.system("octave /home/ubuntu/Documents/OctoCAD/v-bis-20200602/io.m");
+        os.system("octave /home/ubuntu/OctoCAD/gear/spur-gear/bis/v-bis-20200602/io.m");
         self.createResult();
     def createResult(self):
-        with open("/home/ubuntu/OctoCAD/result.txt","r") as result_f:
+        with open("/home/ubuntu/.OctoCAD/result.txt","r") as result_f:
             str_Fd=result_f.readline().split("=")[1].rstrip("\n");
             str_Fap=result_f.readline().split("=")[1].rstrip("\n");
             str_Fag=result_f.readline().split("=")[1].rstrip("\n");
