@@ -88,8 +88,8 @@ class Gui(QDialog):
         self.cs.setRange(1,10);
         self.formGroupBox.setLayout(self.layout);
     def submit(self):
-        os.makedirs("/home/ubuntu/.OctoCAD", exist_ok=True);
-        with open("/home/ubuntu/.OctoCAD/user_input.txt","w") as user_input_f:
+        os.makedirs("/home/ubuntu/.OctoCAD/spur-gear", exist_ok=True);
+        with open("/home/ubuntu/.OctoCAD/spur-gear/user_input.txt","w") as user_input_f:
             user_input_f.write("# name: Eg\n# type: scalar\n");
             user_input_f.write(self.Eg.text()+"\n\n\n");
             user_input_f.write("# name: Ep\n# type: scalar\n");
@@ -127,7 +127,7 @@ class Gui(QDialog):
         os.system("octave /home/ubuntu/OctoCAD/gear/spur-gear/bis/v-bis-20200602/io.m");
         self.createResult();
     def createResult(self):
-        with open("/home/ubuntu/.OctoCAD/result.txt","r") as result_f:
+        with open("/home/ubuntu/.OctoCAD/spur-gear/result.txt","r") as result_f:
             str_Fd=result_f.readline().split("=")[1].rstrip("\n");
             str_Fap=result_f.readline().split("=")[1].rstrip("\n");
             str_Fag=result_f.readline().split("=")[1].rstrip("\n");
