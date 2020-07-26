@@ -1,12 +1,8 @@
-OctoCAD©, version 20.05 Copyright 2020 Atharv B Darekar.
+OctoCAD©, version 20.05
 
-OctoCAD© is a design automation software for machine elements and 
-an application programming interface for FreeCAD which generates 
-the CAD models of the machine element.
+Copyright 2020 Atharv B Darekar.
 
-Dependencies: GNU Octave and FreeCAD.
-
-There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or 
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
 FITNESS FOR A PARTICULAR PURPOSE.
 
 OctoCAD© software is currently under development.
