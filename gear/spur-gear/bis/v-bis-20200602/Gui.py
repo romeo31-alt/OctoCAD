@@ -23,7 +23,7 @@ class Gui(QDialog):
         self.centering();
         self.show();
     def setIcon(self):
-        icon=QIcon("/home/ubuntu/OctoCAD/gear/spur-gear/bis/v-bis-20200602/logo_transparent_enlarged.png");
+        icon=QIcon("/home/ubuntu/modules-OctoCAD/gear/spur-gear/bis/v-bis-20200602/logo_transparent_enlarged.png");
         self.setWindowIcon(icon);
     def centering(self):
         window=self.frameGeometry();
@@ -124,7 +124,7 @@ class Gui(QDialog):
             user_input_f.write(self.zg.text()+"\n\n\n");
             user_input_f.write("# name: zp\n# type: scalar\n");
             user_input_f.write(self.zp.text()+"\n\n\n");
-        os.system("octave /home/ubuntu/OctoCAD/gear/spur-gear/bis/v-bis-20200602/io.m");
+        os.system("octave /home/ubuntu/modules-OctoCAD/gear/spur-gear/bis/v-bis-20200602/io.m");
         self.createResult();
     def createResult(self):
         with open("/home/ubuntu/.OctoCAD/spur-gear/result.txt","r") as result_f:
