@@ -54,10 +54,10 @@ class Main(QWidget):
         grid.addWidget(btn_about,1,1);
         self.groupBox__createMainLayout.setLayout(grid);
     def design(self):
-        self.obj_QWidget__modules=QWidget();
-        self.obj_QWidget__modules.setWindowTitle("Design");
-        self.obj_QWidget__modules.setGeometry(0,0,600,400);
-        self.centering(self.obj_QWidget__modules);
+        self.obj_QWidget__design=QWidget();
+        self.obj_QWidget__design.setWindowTitle("Design");
+        self.obj_QWidget__design.setGeometry(0,0,600,400);
+        self.centering(self.obj_QWidget__design);
         vbox=QVBoxLayout();
         self.obj_QStackedWidget__design=QStackedWidget();
         vbox.addWidget(self.obj_QStackedWidget__design);
@@ -65,11 +65,10 @@ class Main(QWidget):
         self.obj_QStackedWidget__design.addWidget(label);
         for x in range(0,8):
             self.button=QPushButton("<module "+str(x)+">");
-            self.button.setStyleSheet('background-color:blue');
             vbox.addWidget(self.button);
         vbox.addWidget(self.obj_QStackedWidget__design);
-        self.obj_QWidget__modules.setLayout(vbox);
-        self.obj_QWidget__modules.show();
+        self.obj_QWidget__design.setLayout(vbox);
+        self.obj_QWidget__design.show();
         self.obj_QWidget____init__.close();
     def cadmodel(self):
         self.obj_QWidget__cadmodel=QWidget();
@@ -83,7 +82,6 @@ class Main(QWidget):
         self.obj_QStackedWidget__cadmodel.addWidget(label);
         for x in range(0,8):
             self.button=QPushButton("<module "+str(x)+">");
-            self.button.setStyleSheet('background-color:blue');
             vbox.addWidget(self.button);
         vbox.addWidget(self.obj_QStackedWidget__cadmodel);
         self.obj_QWidget__cadmodel.setLayout(vbox);
