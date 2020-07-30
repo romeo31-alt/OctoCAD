@@ -11,7 +11,7 @@ class Main(QWidget):
         self.setWindowTitle("OctoCAD\N{COPYRIGHT SIGN}");
         self.setGeometry(0,0,600,400);
         self.setIcon();
-        self.centering();
+        self.centering(self);
         self.createMainLayout();
         vbox=QVBoxLayout();
         vbox.addWidget(self.groupBox__createMainLayout);
@@ -20,11 +20,11 @@ class Main(QWidget):
     def setIcon(self):
         icon=QIcon("/home/ubuntu/modules-OctoCAD/gui/v-20200807/logo_transparent_enlarged.png");
         self.setWindowIcon(icon);
-    def centering(self):
-        window=self.frameGeometry();
+    def centering(self,arg_window):
+        window=arg_window.frameGeometry();
         center=QDesktopWidget().availableGeometry().center();
         window.moveCenter(center);
-        self.move(window.topLeft());
+        arg_window.move(window.topLeft());
     def createMainLayout(self):
         self.groupBox__createMainLayout=QGroupBox("Select");
         self.groupBox__createMainLayout.setFont(QFont("Sanserif",13));
@@ -46,6 +46,7 @@ class Main(QWidget):
         self.obj_QWidget__modules=QWidget();
         self.obj_QWidget__modules.setWindowTitle("Design");
         self.obj_QWidget__modules.setGeometry(0,0,600,400);
+        self.centering(self.obj_QWidget__modules);
         groupBox=QGroupBox("Select");
         groupBox.setFont(QFont("Sanserif",13));
         hbox=QHBoxLayout();
@@ -64,6 +65,7 @@ class Main(QWidget):
         self.obj_QWidget__cadmodel=QWidget();
         self.obj_QWidget__cadmodel.setWindowTitle("3-D Model");
         self.obj_QWidget__cadmodel.setGeometry(0,0,600,400);
+        self.centering(self.obj_QWidget__cadmodel);
         groupBox=QGroupBox("Select");
         groupBox.setFont(QFont("Sanserif",13));
         hbox=QHBoxLayout();
