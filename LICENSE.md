@@ -1,4 +1,4 @@
-OctoCAD©, version 20.05
+OctoCAD©
 
 Copyright 2020 Atharv B Darekar.
 
