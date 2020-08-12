@@ -10,8 +10,18 @@
     <height>400</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>3-D Model</string>
+   <string>Design</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>logo_transparent_enlarged.png</normaloff>logo_transparent_enlarged.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -44,10 +54,17 @@
             <x>0</x>
             <y>0</y>
             <width>543</width>
-            <height>418</height>
+            <height>504</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>&lt;category&gt;</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QPushButton" name="pushButton_2">
              <property name="text">
@@ -80,6 +97,13 @@
             <widget class="QPushButton" name="pushButton_11">
              <property name="text">
               <string>&lt;module&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>&lt;category&gt;</string>
              </property>
             </widget>
            </item>
@@ -119,6 +143,13 @@
             </widget>
            </item>
            <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>&lt;category&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_7">
              <property name="text">
               <string>&lt;module&gt;</string>
@@ -127,6 +158,13 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_5">
+             <property name="text">
+              <string>&lt;module&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_15">
              <property name="text">
               <string>&lt;module&gt;</string>
              </property>
