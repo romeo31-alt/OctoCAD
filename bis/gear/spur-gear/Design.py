@@ -1,14 +1,13 @@
 #program: Graphical User Interface for the spur gear design module
 #author: Atharv Darekar
 from PySide2.QtWidgets import (QApplication, QDesktopWidget, QComboBox, QDialog, QMessageBox, QDialogButtonBox,
-                               QFormLayout, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QDoubleSpinBox,
-                               QMenu, QMenuBar, QPushButton, QSpinBox, QTextEdit, QVBoxLayout);
+                               QFormLayout, QGroupBox, QLabel, QDoubleSpinBox, QSpinBox, QVBoxLayout);
 from PySide2.QtGui import QIcon, QFont, QDoubleValidator;
 import sys;
 import os;
-class Gui(QDialog):
+class Design(QDialog):
     def __init__(self):
-        super(Gui, self).__init__();
+        super(spur_design, self).__init__();
         self.createForm();
         self.buttonBox=QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel);
         self.buttonBox.accepted.connect(self.submit);
@@ -23,7 +22,7 @@ class Gui(QDialog):
         self.centering();
         self.show();
     def setIcon(self):
-        icon=QIcon("/home/ubuntu/modules-OctoCAD/gear/spur-gear/bis/v-bis-20200602/logo_transparent_enlarged.png");
+        icon=QIcon("/home/ubuntu/OctoCAD/icons/logo_transparent_enlarged.png");
         self.setWindowIcon(icon);
     def centering(self):
         window=self.frameGeometry();
@@ -89,42 +88,42 @@ class Gui(QDialog):
         self.formGroupBox.setLayout(self.layout);
     def submit(self):
         os.makedirs("/home/ubuntu/.OctoCAD/spur-gear", exist_ok=True);
-        with open("/home/ubuntu/.OctoCAD/spur-gear/user_input.txt","w") as user_input_f:
-            user_input_f.write("# name: Eg\n# type: scalar\n");
-            user_input_f.write(self.Eg.text()+"\n\n\n");
-            user_input_f.write("# name: Ep\n# type: scalar\n");
-            user_input_f.write(self.Ep.text()+"\n\n\n");
-            user_input_f.write("# name: FOSr\n# type: scalar\n");
-            user_input_f.write(self.FOSr.text()+"\n\n\n");
-            user_input_f.write("# name: Np\n# type: scalar\n");
-            user_input_f.write(self.Np.text()+"\n\n\n");
-            user_input_f.write("# name: P\n# type: scalar\n");
-            user_input_f.write(self.P.text()+"\n\n\n");
-            user_input_f.write("# name: Q\n# type: scalar\n");
+        with open("/home/ubuntu/.OctoCAD/spur-gear/user_input_design.txt","w") as user_input_design_f:
+            user_input_design_f.write("# name: Eg\n# type: scalar\n");
+            user_input_design_f.write(self.Eg.text()+"\n\n\n");
+            user_input_design_f.write("# name: Ep\n# type: scalar\n");
+            user_input_design_f.write(self.Ep.text()+"\n\n\n");
+            user_input_design_f.write("# name: FOSr\n# type: scalar\n");
+            user_input_design_f.write(self.FOSr.text()+"\n\n\n");
+            user_input_design_f.write("# name: Np\n# type: scalar\n");
+            user_input_design_f.write(self.Np.text()+"\n\n\n");
+            user_input_design_f.write("# name: P\n# type: scalar\n");
+            user_input_design_f.write(self.P.text()+"\n\n\n");
+            user_input_design_f.write("# name: Q\n# type: scalar\n");
             if self.Q.currentText()=="Internal gearing":
-                user_input_f.write("1"+"\n\n\n");
+                user_input_design_f.write("1"+"\n\n\n");
             if self.Q.currentText()=="External gearing":
-                user_input_f.write("2"+"\n\n\n");
-            user_input_f.write("# name: Sutg\n# type: scalar\n");
-            user_input_f.write(self.Sutg.text()+"\n\n\n");
-            user_input_f.write("# name: Sutp\n# type: scalar\n");
-            user_input_f.write(self.Sutp.text()+"\n\n\n");
-            user_input_f.write("# name: cs\n# type: scalar\n");
-            user_input_f.write(self.cs.text()+"\n\n\n");
-            user_input_f.write("# name: grade\n# type: scalar\n");
-            user_input_f.write(self.grade.currentText()+"\n\n\n");
-            user_input_f.write("# name: y\n# type: scalar\n");
+                user_input_design_f.write("2"+"\n\n\n");
+            user_input_design_f.write("# name: Sutg\n# type: scalar\n");
+            user_input_design_f.write(self.Sutg.text()+"\n\n\n");
+            user_input_design_f.write("# name: Sutp\n# type: scalar\n");
+            user_input_design_f.write(self.Sutp.text()+"\n\n\n");
+            user_input_design_f.write("# name: cs\n# type: scalar\n");
+            user_input_design_f.write(self.cs.text()+"\n\n\n");
+            user_input_design_f.write("# name: grade\n# type: scalar\n");
+            user_input_design_f.write(self.grade.currentText()+"\n\n\n");
+            user_input_design_f.write("# name: y\n# type: scalar\n");
             if self.y.currentText()=="14.5 degree full depth involute tooth":
-                user_input_f.write("1"+"\n\n\n");
+                user_input_design_f.write("1"+"\n\n\n");
             if self.y.currentText()=="20 degree full depth involute tooth":
-                user_input_f.write("2"+"\n\n\n");
+                user_input_design_f.write("2"+"\n\n\n");
             if self.y.currentText()=="20 degree stub involute tooth":
-                user_input_f.write("3"+"\n\n\n");
-            user_input_f.write("# name: zg\n# type: scalar\n");
-            user_input_f.write(self.zg.text()+"\n\n\n");
-            user_input_f.write("# name: zp\n# type: scalar\n");
-            user_input_f.write(self.zp.text()+"\n\n\n");
-        os.system("octave /home/ubuntu/modules-OctoCAD/gear/spur-gear/bis/v-bis-20200602/io.m");
+                user_input_design_f.write("3"+"\n\n\n");
+            user_input_design_f.write("# name: zg\n# type: scalar\n");
+            user_input_design_f.write(self.zg.text()+"\n\n\n");
+            user_input_design_f.write("# name: zp\n# type: scalar\n");
+            user_input_design_f.write(self.zp.text()+"\n\n\n");
+        os.system("octave /home/ubuntu/OctoCAD/bis/gear/spur-gear/io.m");
         self.createResult();
     def createResult(self):
         with open("/home/ubuntu/.OctoCAD/spur-gear/result.txt","r") as result_f:
@@ -144,6 +143,6 @@ class Gui(QDialog):
             result_box.exec_();
             obj_QApplication.exit();
 obj_QApplication=QApplication(sys.argv);
-obj_Gui=Gui();
+obj_spur_design=spur_design();
 obj_QApplication.exec_();
 sys.exit(0);
