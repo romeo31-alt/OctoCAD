@@ -1,6 +1,6 @@
 OctoCAD©
 
-Copyright 2020 Atharv B Darekar.
+Copyright 2020 Atharv B Darekar and others.
 
 There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
 FITNESS FOR A PARTICULAR PURPOSE.
